@@ -32,7 +32,7 @@ button.onclick=function(){
       }
     };
     
-  //capture the response and store it in a variable
-  
-  
+ //make the request
+ request.oen("GET","http://pmahesh9491.imad.hasura-app.io/counter", true);
+ request.send();
 };
