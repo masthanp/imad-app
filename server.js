@@ -9,13 +9,30 @@ var content={
     title : 'Article one Mahesh',
     heading : 'article 1',
     date : 'aug 3,2017',
-    content: ''
+    content:  `
+                <p>
+                    This is the content of my first article. This is the content of my first article. This is the content of my first article.
+                    This is the content of my first article. This is the content of my first article. This is the content of my first article
+                </p>
                 
                 
-            
-               
+                
+                <p>
+                    This is the content of my first article. This is the content of my first article. This is the content of my first article.
+                    This is the content of my first article. This is the content of my first article. This is the content of my first article
+                </p>
+                
+                
+                <p>
+                    This is the content of my first article. This is the content of my first article. This is the content of my first article.
+                    This is the content of my first article. This is the content of my first article. This is the content of my first article
+                </p> '
+                
 };
 
+var htmlTemplate = '
+
+';
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
