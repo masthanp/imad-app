@@ -38,3 +38,13 @@ button.onclick=function(){
  request.open('GET','http://pmahesh9491.imad.hasura-app.io/counter', true);
  request.send(null);
 };
+
+//submit name
+
+var nameInput=document.getElementById("name");
+var name = nameInput.value;
+var submit = document.getElementById("submit_btn");
+submit.onclick = function(){
+  //make request to server and sends a name
+  //capture the list of name and store it as a list
+};
