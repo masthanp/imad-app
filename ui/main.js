@@ -20,7 +20,7 @@ var nameInput=document.getElementById("name");
 var name = nameInput.value;
 var submit = document.getElementById("submit_btn");
 
-button.onclick=function(){
+submit.onclick=function(){
     
   //create request object
     var request = new XMLHttpRequest();
