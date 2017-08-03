@@ -30,9 +30,11 @@ button.onclick=function(){
               span.innerHTML = counter.toString();
           }
       }
+      
+      //not done yet
     };
     
  //make the request
- request.oen("GET","http://pmahesh9491.imad.hasura-app.io/counter", true);
+ request.open('GET','http://pmahesh9491.imad.hasura-app.io/counter', true);
  request.send(null);
 };
