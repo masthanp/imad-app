@@ -71,11 +71,7 @@ var articles = {
                     This is the content of my first article. This is the content of my first article. This is the content of my first article.
                     This is the content of my first article. This is the content of my first article. This is the content of my first article
                 </p> `}
-
 };
-    
-
-
 function createTemplate(data){
     var title = data.title;
     var heading = data.heading;
