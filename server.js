@@ -72,7 +72,7 @@ var articles : {
                     This is the content of my first article. This is the content of my first article. This is the content of my first article
                 </p> `}
 
-} ;
+};
     
 
 
