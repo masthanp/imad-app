@@ -9,9 +9,10 @@ var content={
     title : 'Article one Mahesh',
     heading : 'article 1',
     date : 'aug 3,2017',
-    content :                                       '
-              
-    
+    content: ''
+                
+                
+            
                
 };
 
