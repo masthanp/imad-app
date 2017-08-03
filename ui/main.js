@@ -34,7 +34,7 @@ submit.onclick=function(){
               span.innerHTML = counter.toString();*/
               
               //capture the list of name and store it as a list
-              var names = req.responseText;
+              var names = request.responseText;
               names = JSON.parse(names);
               var list = "";
               for(var i=0 ; i<names.length;i++){
