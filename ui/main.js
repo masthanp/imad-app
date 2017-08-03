@@ -34,5 +34,5 @@ button.onclick=function(){
     
  //make the request
  request.oen("GET","http://pmahesh9491.imad.hasura-app.io/counter", true);
- request.send();
+ request.send(null);
 };
