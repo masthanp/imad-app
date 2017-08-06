@@ -1,6 +1,7 @@
 /*console.log('Loaded!');
 var element=document.getElementById("main-text");
 element.innerHTML = "new value ";
+*/
 
 //move the image
 var img = document.getElementById("madi");
@@ -12,8 +13,7 @@ function moveRight(){
 
 img.onclick = function(){
     var interval = setInterval(moveRight,50);
-};*/
-
+};
 //submit name
 
 
