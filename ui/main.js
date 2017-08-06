@@ -92,8 +92,8 @@ comment.onclick=function(){
           //take some action
           if(request.status === 200){
               var comment =request.responseText;
-              var span = document.getElementById("count");
-              span.innerHTML = counter.toString();
+              var para = document.getElementById("comments");
+             para.innerHTML = counter.toString();
           }
       }
       
@@ -101,6 +101,6 @@ comment.onclick=function(){
     };
     
  //make the request
- request.open('GET','http://pmahesh9491.imad.hasura-app.io/counter', true);
+ request.open('GET','http://pmahesh9491.imad.hasura-app.io/comments', true);
  request.send(null);
 };
