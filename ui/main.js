@@ -93,7 +93,7 @@ comment.onclick=function(){
           if(request.status === 200){
               var comment =request.responseText;
               var para = document.getElementById("comments");
-             para.innerHTML = comment.toString();
+             para.innerHTML = comment;
           }
       }
       
