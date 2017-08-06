@@ -117,6 +117,12 @@ app.get('/counter',function(req,res){
    res.send(counter.toString()) ;
 });
 
+var text="";
+app.get('/comments',function(req,res){
+    text="These sre the comments in this page";
+    res.send(text);
+});
+
 var names =[];
 app.get('/submit-name',function(req,res){ //URL =/submit-name?name
    //get the name from request
