@@ -92,8 +92,8 @@ comment.onclick=function(){
       if(request.readyState === XMLHttpRequest.DONE)  {
           //take some action
           if(request.status === 200){
-              /*var comment =request.responseText;*/
-               var comment = $('body').getComments();
+              var comment =request.responseText;
+               
               var para = document.getElementById("comments");
              para.innerHTML = comment[0];
           }
