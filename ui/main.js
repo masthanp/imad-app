@@ -28,9 +28,9 @@ submit.onclick=function(){
       if(request.readyState === XMLHttpRequest.DONE)  {
           //take some action
           if(request.status === 200){
-             /* var counter =request.responseText;
+              var counter =request.responseText;
               var span = document.getElementById("count");
-              span.innerHTML = counter.toString();*/
+              span.innerHTML = counter.toString();
               
               //capture the list of name and store it as a list
               var names = request.responseText;
@@ -47,5 +47,9 @@ submit.onclick=function(){
       //not done yet
     };
     
-  
+    var nameInput=document.getElementById("name");
+    var name = nameInput.value;
+ //make the request
+ request.open('GET','http://pmahesh9491.imad.hasura-app.io/submit-name?name='+name, true);
+ request.send(null);
 };
