@@ -47,9 +47,5 @@ submit.onclick=function(){
       //not done yet
     };
     
-    var nameInput=document.getElementById("name");
-    var name = nameInput.value;
- //make the request
- request.open('GET','http://pmahesh9491.imad.hasura-app.io/submit-name?name='+name, true);
- request.send(null);
+  
 };
