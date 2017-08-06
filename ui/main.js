@@ -80,7 +80,7 @@ counter.onclick=function(){
 };
 
 
-var comment = document.getElementById("commentr");
+var comment = document.getElementById("comment");
 
 comment.onclick=function(){
     
@@ -91,9 +91,9 @@ comment.onclick=function(){
       if(request.readyState === XMLHttpRequest.DONE)  {
           //take some action
           if(request.status === 200){
-              var comment1 =request.responseText;
+              var comment =request.responseText;
               var para = document.getElementById("comments");
-             para.innerHTML = comment1;
+             para.innerHTML = comment;
           }
       }
       
