@@ -33,9 +33,8 @@ submit.onclick=function(){
               span.innerHTML = counter.toString();
               */
               //capture the list of name and store it as a list
-             /* var names = request.responseText;
-              names = JSON.parse(names);*/
-               var names = $('body').getComments();
+              var names = request.responseText;
+              names = JSON.parse(names);
                
               var list = "";
               for(var i=0 ; i<names.length;i++){
