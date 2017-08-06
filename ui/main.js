@@ -53,3 +53,28 @@ submit.onclick=function(){
  request.open('GET','http://pmahesh9491.imad.hasura-app.io/submit-name?name='+name, true);
  request.send(null);
 };
+
+var counter = document.getElementById("counter");
+
+counter.onclick=function(){
+    
+  //create request object
+    var request = new XMLHttpRequest();
+    
+    request.onreadystatechange = function(){
+      if(request.readyState === XMLHttpRequest.DONE)  {
+          //take some action
+          if(request.status === 200){
+              var counter =request.responseText;
+              var span = document.getElementById("count");
+              span.innerHTML = counter.toString();
+          }
+      }
+      
+      //not done yet
+    };
+    
+ //make the request
+ request.open('GET','http://pmahesh9491.imad.hasura-app.io/counter', true);
+ request.send(null);
+};
