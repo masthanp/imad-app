@@ -95,7 +95,7 @@ comment.onclick=function(){
               var comment =request.responseText;
                
               var para = document.getElementById("comments");
-             para.innerHTML = comment[0];
+             para.innerHTML = comment;
           }
       }
       
