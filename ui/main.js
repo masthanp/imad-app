@@ -78,3 +78,29 @@ counter.onclick=function(){
  request.open('GET','http://pmahesh9491.imad.hasura-app.io/counter', true);
  request.send(null);
 };
+
+
+var comment = document.getElementById("commentr");
+
+comment.onclick=function(){
+    
+  //create request object
+    var request = new XMLHttpRequest();
+    
+    request.onreadystatechange = function(){
+      if(request.readyState === XMLHttpRequest.DONE)  {
+          //take some action
+          if(request.status === 200){
+              var comment =request.responseText;
+              var span = document.getElementById("count");
+              span.innerHTML = counter.toString();
+          }
+      }
+      
+      //not done yet
+    };
+    
+ //make the request
+ request.open('GET','http://pmahesh9491.imad.hasura-app.io/counter', true);
+ request.send(null);
+};
