@@ -111,6 +111,8 @@ function createTemplate(data){
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
+
+/*hai hellow how are you*/
 var counter = 0;
 app.get('/counter',function(req,res){
     counter = counter + 1;
@@ -119,6 +121,7 @@ app.get('/counter',function(req,res){
 
 var text="";
 app.get('/comments',function(req,res){
+   /* var com1=$('body').getComments();*/
     text="These sre the comments in this page";
     res.send(text);
 });
