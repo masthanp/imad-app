@@ -121,9 +121,10 @@ app.get('/counter',function(req,res){
 
 var text="";
 app.get('/comments',function(req,res){
-   /* var com1=$('body').getComments();*/
-    text="These sre the comments in this page";
-    res.send(text);
+    var com1=$('body').getComments();
+     text=JSON.stringify(com1);
+   // text="These sre the comments in this page";
+    res.send(text[0]);
 });
 
 var names =[];
