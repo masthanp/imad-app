@@ -7,8 +7,8 @@ var config ={
     user : 'pmahesh9491',
     database : 'pmahesh9491',
     host :'http://db.imad.hasura-app.io/',
-    port : '5432',
-    password : process.env(DB_PASSWORD)
+    port :'5432',
+    password : process.env.DB_PASSWORD
     
 }
 
