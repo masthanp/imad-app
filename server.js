@@ -164,7 +164,7 @@ app.get('/articles/:articleName', function (req, res) {
     //articles[articleName] == {} content Object for article one
     /*var articleName = req.params.articleName; //express library*/
    
-    poo.query("SELECT * FROM article1 WHERE title = "+ req.params.articleName,function(err,result){
+    poo.query("SELECT * FROM article1 WHERE title = '"+ req.params.articleName + "'",function(err,result){
         if(err){
             res.status(500).send(err.toString());
         }else{
