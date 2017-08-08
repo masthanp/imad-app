@@ -159,11 +159,23 @@ app.get('/submit-name',function(req,res){ //URL =/submit-name?name
    res.send(JSON.stringify(names));
 });
 
-app.get('/:articleName', function (req, res) {
+app.get('/articles/:articleName', function (req, res) {
     //articleName == article-one
     //articles[articleName] == {} content Object for article one
-    var articleName = req.params.articleName; //express library
-  res.send(createTemplate(articles[articleName]));
+    /*var articleName = req.params.articleName; //express library*/
+   
+    poo.query("SELECT * FROM article1 WHERE title = "+ req.params.articleName,function(err,result){
+        if(err){
+            res.status(500).send(err.toString());
+        }else{
+            if(result.rows.length === 0){
+                res.status(404).send('article not found')
+            }else{
+                var articleData  = result.rows[0];
+                res.send(createTemplate(articleData));
+            }
+        }
+    });
 });
 
 app.get('/ui/style.css', function (req, res) {
