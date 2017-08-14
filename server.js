@@ -90,7 +90,7 @@ app.get('/login',function(req,res){
     //username,password
     //Json
     var username ="mahesh";
-    var password = "password";
+    var password = "passwor";
    /* 
     var username =req.body.username;
     var password = req.body.password;*/
