@@ -98,7 +98,7 @@ app.get('/login',function(req,res){
             res.status(500).send(err.toString());
         }else{
             if(result.rows.length === 0){
-                res.status(403).send('username/password is invalid');
+                res.status(403).send('no username/password is invalid');
             }else{
                 //match the passwod
                 var dbString=result.rows[0].password;
