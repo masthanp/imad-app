@@ -67,7 +67,7 @@ app.get('/hash/:input',function(req,res){
    var hashedString=hash(req.params.input,'this-is-some-random-string');
    res.send(hashedString);
 });
-
+/*
 app.get('/create-user',function(req,res){
     //username,password
     //Json
@@ -82,7 +82,7 @@ app.get('/create-user',function(req,res){
             res.send('user successfully created : '+ username);
         }
     });
-});
+});*/
 var pool = new Pool(config);
 app.get('/test-db',function(req,res){
     //make a select  request
