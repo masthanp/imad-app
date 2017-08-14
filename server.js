@@ -108,7 +108,7 @@ app.get('/login',function(req,res){
                 }else{
                     res.status(403).send('username/password is invalid')
                 }*/
-                res.send(dbString);
+                res.send(hashedPassword);
                 
             }
         }
