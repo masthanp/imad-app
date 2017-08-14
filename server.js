@@ -91,6 +91,9 @@ app.get('/login',function(req,res){
     //Json
     var username ="mahesh";
     var password = "password";
+    /*
+    var username =req.body.username;
+    var password = req.body.password;*/
     var salt=crypto.randomBytes(128).toString('hex'); 
     var dbString=hash(password,salt) ;
     pool.query('SELECT * FROM "user" where username = $1',[username],function(err,result){
