@@ -119,7 +119,7 @@ app.get('/test-db',function(req,res){
     //make a select  request
     //return and response with th results
     var name1 =1;
-    pool.query('SELECT * FROM test where id = 1',function(err, result){
+    pool.query('SELECT * FROM test where id = $1'[name1],function(err, result){
         if(err){
             res.status(500).send(err.toString());
         }else{
