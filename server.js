@@ -86,7 +86,7 @@ app.post('/create-user',function(req,res){
     
 });
 
-app.get('/login',function(req,res){
+app.post('/login',function(req,res){
     //username,password
     //Json
     var username ="mahesh";
