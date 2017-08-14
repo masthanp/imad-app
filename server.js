@@ -89,11 +89,11 @@ app.get('/create-user',function(req,res){
 app.get('/login',function(req,res){
     //username,password
     //Json
-   /* var username ="mahesh";
-    var password = "password";*/
-    
+    var username ="mahesh";
+    var password = "password";
+   /* 
     var username =req.body.username;
-    var password = req.body.password;
+    var password = req.body.password;*/
     var salt=crypto.randomBytes(128).toString('hex'); 
     var dbString=hash(password,salt) ;
     pool.query('SELECT * FROM "user" where username = $1',[username],function(err,result){
