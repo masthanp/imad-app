@@ -83,7 +83,7 @@ app.get('/create-user',function(req,res){
             res.send('user successfully created : '+ username);
         }
     });*/
-    res.send(dbString)
+    res.send(dbString.toString());
 });
 var pool = new Pool(config);
 app.get('/test-db',function(req,res){
