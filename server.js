@@ -93,7 +93,7 @@ app.post('/login',function(req,res){
     var password = "password";
     var salt=crypto.randomBytes(128).toString('hex'); 
     var dbString=hash(password,salt) ;
-    pool.query('SELECT * FROM "user" username = $1',[username],function(err,result){
+    pool.query('SELECT * FROM "user" where username = $1',[username],function(err,result){
         if(err){
             res.status(500).send(err.toString());
         }else{
@@ -119,7 +119,7 @@ app.get('/test-db',function(req,res){
     //make a select  request
     //return and response with th results
     var name1 =2;
-    pool.query('SELECT * FROM test where id = $1',[name1],function(err, result){
+    pool.query('SELECT * FROM test ',function(err, result){
         if(err){
             res.status(500).send(err.toString());
         }else{
