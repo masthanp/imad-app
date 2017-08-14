@@ -72,8 +72,8 @@ app.get('/hash/:input',function(req,res){
 app.post('/create-user',function(req,res){
     //username,password
     //Json
-    var username = req.body.username;
-    var password = req.body.password;
+    var username ="mahesh";
+    var password = "password";
     var salt=crypto.randomBytes(128).toString('hex'); 
     var dbString=hash(password,salt) ;
     pool.query('INSERT INTO "user" (username,password) VALUES ($1,$2)',[username,dbString],function(err,result){
@@ -85,6 +85,28 @@ app.post('/create-user',function(req,res){
     });
     
 });
+/*
+app.post('/login',function(req,res){
+    //username,password
+    //Json
+    var username = req.body.username;
+    var password = req.body.password;
+    var salt=crypto.randomBytes(128).toString('hex'); 
+    var dbString=hash(password,salt) ;
+    pool.query('SELECT * FROM "user" username = $1',[username],function(err,result){
+        if(err){
+            res.status(500).send(err.toString());
+        }else{
+            if(result.rows.length === 0){
+                res.status(403).send('username/password is invalid');
+            }else{
+                //match the passwod
+            }
+            res.send('user successfully created : '+ username);
+        }
+    });
+    
+});*/
 var pool = new Pool(config);
 app.get('/test-db',function(req,res){
     //make a select  request
