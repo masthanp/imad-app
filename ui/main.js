@@ -28,7 +28,7 @@ register.onclick=function(){
 };
 
 //submit username and password
-var login = document.getElementById("register_btn");
+var login = document.getElementById("login_btn");
 login.onclick=function(){
   //create request object
     var request = new XMLHttpRequest();
