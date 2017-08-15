@@ -91,13 +91,13 @@ app.post('/register-user',function(req,res){
     
 });
 
-app.post('/login-user',function(req,res){
+app.get('/login-user',function(req,res){
     //username,password
     //Json
    /* var username ="mahesh";
     var password = "password";*/
     
-    var username =req.body.username;
+  /*  var username =req.body.username;
     var password = req.body.password;
     var salt=crypto.randomBytes(128).toString('hex'); 
     var dbString=hash(password,salt) ;
@@ -128,7 +128,8 @@ app.post('/login-user',function(req,res){
             }
         }
     });
-    
+  */ 
+  res.sendFile(path.join(__dirname, 'ui', 'logout.html'));
 });
 
 app.get('/check-login',function(req,res){
