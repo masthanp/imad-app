@@ -91,7 +91,7 @@ app.post('/register-user',function(req,res){
     
 });
 
-app.get('/login-user',function(req,res){
+app.post('/login-user',function(req,res){
     //username,password
     //Json
    /* var username ="mahesh";
