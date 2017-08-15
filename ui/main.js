@@ -38,7 +38,7 @@ login.onclick=function(){
           //take some action
           if(request.status === 200){
               alert("user Logged successfully ");
-            //  document.getElementById('login_btn').value="logged";
+            document.getElementById('login_btn').value="logged";
           }else if(request.status === 403){
               alert("username/password is incorrect");
           }else if(request.status === 500){
@@ -56,6 +56,4 @@ login.onclick=function(){
  request.open('POST','http://pmahesh9491.imad.hasura-app.io/login-user', true);
  request.setRequestHeader('Content-Type','application/json');
  request.send(JSON.stringify({username: username, password: password}));
- 
- 
 };
