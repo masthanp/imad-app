@@ -28,7 +28,7 @@ register.onclick=function(){
 };
 
 //submit username and password
-var login = document.getElementById("login_btn");
+/*var login = document.getElementById("login_btn");
 login.onclick=function(){
   //create request object
    /* var request = new XMLHttpRequest();
@@ -57,3 +57,5 @@ login.onclick=function(){
  var log=document.getElementById('register_btn');
  log.innerHTML="logged";
 };
+*/
+function change();
