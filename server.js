@@ -115,15 +115,14 @@ app.post('/login',function(req,res){
                 if(hashedPassword === dbString){
                     
                     //set the session value
-                    req.session.auth = {userId : result.rows[0].id};
+                    req.session.auth = {userId: result.rows[0].id};
                     //set cookie with session id
                     //internally, on server side, it maps the sesssion id to an object
-                    //{auth :userId}
+                    //{auth: userId}
                     res.send('credentials correct');
                 }else{
                     res.status(403).send('username/password is invalid');
                 }
-                res.send(hashedPassword);
                 
             }
         }
