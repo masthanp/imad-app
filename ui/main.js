@@ -54,6 +54,6 @@ login.onclick=function(){
  request.open('POST','http://pmahesh9491.imad.hasura-app.io/login-user', true);
  request.setRequestHeader('Content-Type','application/json');
  request.send(JSON.stringify({username: username, password: password}));*/
- var log=document.getElementById('login_btn').value;
+ var log=document.getElementById('hai');
  log.innerHTML="logged";
 };
