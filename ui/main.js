@@ -59,10 +59,3 @@ login.onclick=function(){
  request.send(JSON.stringify({username: username, password: password}));
   
 };
-var names=['name1','name2'];
-var list='';
-for(var i=0;i<names.lenght;i++){
-    list+='<li>' +names[i] + ',/li>';
-}
-var ul=document.getElementById('articleList');
-ul.innerHTML=list
