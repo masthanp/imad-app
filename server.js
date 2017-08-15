@@ -74,7 +74,7 @@ app.get('/hash/:input',function(req,res){
    res.send(hashedString);
 });
 
-app.get('/register-user',function(req,res){
+app.post('/register-user',function(req,res){
     //username,password
     //Json
     var username =req.body.username;
