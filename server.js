@@ -77,8 +77,8 @@ app.get('/hash/:input',function(req,res){
 app.get('/register-user',function(req,res){
     //username,password
     //Json
-    var username ="mahesh";
-    var password ="password";
+    var username =req.body.username;
+    var password = req.body.password;
     var salt=crypto.randomBytes(128).toString('hex'); 
     var dbString=hash(password,salt) ;
     pool.query('INSERT INTO "user" (username,password) VALUES ($1,$2)',[username,dbString],function(err,result){
