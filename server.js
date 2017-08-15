@@ -1,7 +1,7 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-var Pool = require('pg').Pool;
+var  Pool = require('pg').Pool;
 var crypto = require('crypto');
 var bodyParser = require('body-parser');
 var session = require('express-session');
@@ -119,7 +119,7 @@ app.post('/login-user',function(req,res){
                     //set cookie with session id
                     //internally, on server side, it maps the sesssion id to an object
                     //{auth: userId}
-                    res.sendFile(path.join(__dirname, 'ui', 'logout.html'));
+                    res.sendFile('ui/logout.html');
                 }else{
                     res.status(403).send('username/password is invalid');
                 }
