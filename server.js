@@ -96,7 +96,7 @@ app.get('/login-user',function(req,res){
     //Json
    /* var username ="mahesh";
     var password = "password";*/
-    
+    /*
     var username =req.body.username;
     var password = req.body.password;
     var salt=crypto.randomBytes(128).toString('hex'); 
@@ -128,7 +128,8 @@ app.get('/login-user',function(req,res){
             }
         }
     });
-    
+    */
+    res.send("hai");
 });
 
 app.get('/check-login',function(req,res){
