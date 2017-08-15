@@ -30,8 +30,9 @@ register.onclick=function(){
 //submit username and password
 var login = document.getElementById("login_btn");
 login.onclick=function(){
+    document.getElementById('login_btn').value="logged";
   //create request object
-   /*var request = new XMLHttpRequest();
+   var request = new XMLHttpRequest();
     request.onreadystatechange = function(){
       if(request.readyState === XMLHttpRequest.DONE)  {
           //take some action
@@ -53,7 +54,7 @@ login.onclick=function(){
  //make the request
  request.open('POST','http://pmahesh9491.imad.hasura-app.io/login-user', true);
  request.setRequestHeader('Content-Type','application/json');
- request.send(JSON.stringify({username: username, password: password}));*/
- document.getElementById('login_btn').value="logged";
+ request.send(JSON.stringify({username: username, password: password}));
+ 
  
 };
