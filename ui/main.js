@@ -17,8 +17,8 @@ submit.onclick=function(){
       //not done yet
     };
     
-    var username=document.getElementById("username").value;
-    var password=document.getElementById("password").value;
+    var username=document.getElementById('username').value;
+    var password=document.getElementById('password').value;
     console.log(username);
     console.log(password);
  //make the request
