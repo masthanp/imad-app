@@ -30,7 +30,7 @@ register.onclick=function(){
 //submit username and password
 var login = document.getElementById("login_btn");
 login.onclick=function(){
-    document.getElementById('login_btn').value="logged";
+    
   //create request object
    var request = new XMLHttpRequest();
     request.onreadystatechange = function(){
@@ -38,6 +38,7 @@ login.onclick=function(){
           //take some action
           if(request.status === 200){
               alert("user Logged successfully ");
+              document.getElementById('login_btn').value="logged";
           }else if(request.status === 403){
               alert("username/password is incorrect");
           }else if(request.status === 500){
