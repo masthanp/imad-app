@@ -8,6 +8,7 @@ register.onclick=function(){
           //take some action
           if(request.status === 200){
               alert("user registered successfully ");
+              document.getElementById('register_btn').value="registered";
           }else if(request.status === 403){
               alert("username/password is incorrect");
           }else if(request.status === 500){
