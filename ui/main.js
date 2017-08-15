@@ -1,5 +1,5 @@
 //submit username and password
-var submit = document.getElementById("submit_btn");
+var submit = document.getElementById("register_btn");
 submit.onclick=function(){
   //create request object
     var request = new XMLHttpRequest();
